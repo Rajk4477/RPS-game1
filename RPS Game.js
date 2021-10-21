@@ -21,7 +21,7 @@ function convertToword(letter){
 }
 function Win(userChoice , computerChoice){
     const smallUserWord="user".fontsize(3).sub();
-    const smallCompWord="user".fontsize(3).sub();
+    const smallCompWord="comp".fontsize(3).sub();
     const userChoice_div=document.getElementById(userChoice);
     userScore++;
     userScore_span.innerHTML= userScore;
@@ -37,7 +37,7 @@ function Lose(userChoice,computerChoice){
     computerScore_span.innerHTML= computerScore;
     const userChoice_div=document.getElementById(userChoice);
     const smallUserWord="user".fontsize(3).sub();
-    const smallCompWord="user".fontsize(3).sub();
+    const smallCompWord="comp".fontsize(3).sub();
     result_p.innerHTML=convertToword(userChoice) +(smallUserWord) + " loses to " + convertToword(computerChoice) +(smallCompWord) + " You lost!";
     userChoice_div.classList.add('red-glow');
     setTimeout(function() { userChoice_div.classList.remove('red-glow') },1000);
@@ -47,7 +47,7 @@ function Draw(userChoice,computerChoice){
     computerScore_span.innerHTML= computerScore;
     const userChoice_div=document.getElementById(userChoice);
     const smallUserWord="user".fontsize(3).sub();
-    const smallCompWord="user".fontsize(3).sub();
+    const smallCompWord="comp".fontsize(3).sub();
     result_p.innerHTML=convertToword(userChoice) +(smallUserWord) + " equals to " + convertToword(computerChoice) +(smallCompWord) + " It's a draw!";
     userChoice_div.classList.add('gray-glow');
     setTimeout(function() { userChoice_div.classList.remove('gray-glow') },1000);
